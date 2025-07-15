@@ -1,0 +1,71 @@
+/* El centrado debe hacerse sobre el elemento padre (.div-titulo), que sí es responsable del layout. */
+
+body {
+  background-image: url("/fondopokemon.png"); /*ruta de la imagen */
+  background-size: cover;             /* Asegura que cubra toda la pantalla */
+  background-position: center;        /* Centra la imagen */
+  background-repeat: no-repeat;       /* Evita que se repita */      
+  background-attachment: fixed;        /*hace que el fondo se quede fijo al hacer scroll*/
+
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box; /* hace que el tamaño que definimos sea ese sin sumar margin y padding*/
+  position: relative;
+}
+
+.header-titulo { 
+  background-color: rgba(177, 165, 165, 0); /* Opcional, para que el canvas resalte */
+
+  border-width: 15px;  
+  border-style: solid; 
+  border-image: linear-gradient(to right, #ffffff60, #000a4465) 1 1 1 1; 
+  box-shadow: -1px 0px 1px 2px#000000fb; /* x - y - desenfoque- extension- color */
+
+  box-sizing: border-box;
+  padding: 0 ; /*agrega espacio extra a los lados*/
+  margin: 0;
+  
+  width: fit-content; /* ajusta al tamaño del contenido*/
+  
+
+  /* parecido a tkinter FLEX-GRID*/
+  display: flex;
+  justify-content: center;  /* Centrado horizontal */
+  align-items: center;      /* Centrado vertical */
+
+
+  /*al no tener un primer ancestro posicionado(con relative, absolute, fixed o sticky), 
+  se posiciona relativo al viewport (la ventana del navegador).*/
+  position: absolute; 
+  /* Esto pone el elemento justo en la mitad del ancho de la pantalla y 
+  luego lo mueve hacia la izquierda la mitad de su propio ancho, logrando un centrado perfecto horizontal.*/
+  left: 50%;
+  transform: translateX(-50%); 
+
+}
+
+.header-titulo h1 {
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3em); /* clamp vuelve responsivo un texto(minimo, 4% ancho de ventana ,maximo)*/
+  margin: 0;
+  text-align: center; /*centra el texto */
+
+  color: white;
+
+    /* Gradiente como fondo */
+  background: linear-gradient(to right, #beedffab, #36363636);
+   /* Sombra del texto */
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  box-shadow: -1px 0px 1px 1px rgb(0, 0, 0);
+  box-sizing: border-box;
+}
+
+.pie {
+  position: absolute;
+  top: 0vh;
+  right: 0;
+  text-align: center;
+  display: block;
+
+}

@@ -1,0 +1,35 @@
+/*CSS externo de componente canvas*/
+.section-canvas {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -500;
+}
+
+.div-canvas{ 
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+
+}
+
+#canvas { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: block;
+  }
