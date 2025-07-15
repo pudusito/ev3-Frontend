@@ -65,7 +65,12 @@ export default function Pokeball3D() {
           camera={{ position: [0, 0.3 , 1], fov: 60 }}>  {/* X(W) , Y(H) , Z(DETRAS) */}
           <ambientLight intensity={2} />
           <directionalLight position={[0, 0, 0]} />
-          <OrbitControls />
+          <OrbitControls enableZoom={false} mouseButtons={{
+            RIGHT: null, // Desactiva botón derecho
+            MIDDLE: null,   // Zoom
+            LEFT: 0      // Rotación
+            }}/>
+            
           <PokeballModel />
         </Canvas>
       </div>
