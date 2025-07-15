@@ -1,5 +1,6 @@
 /* El centrado debe hacerse sobre el elemento padre (.div-titulo), que sí es responsable del layout. */
 
+
 body {
   background-image: url("/fondopokemon.png"); /*ruta de la imagen */
   background-size: cover;             /* Asegura que cubra toda la pantalla */
@@ -11,6 +12,7 @@ body {
   padding: 1em;
   box-sizing: border-box; /* hace que el tamaño que definimos sea ese sin sumar margin y padding*/
   position: relative;
+
 }
 
 .header-titulo { 
@@ -63,7 +65,7 @@ body {
 
 .pie {
   position: absolute;
-  top: 0vh;
+  bottom: 0;
   right: 0;
   text-align: center;
   display: block;
