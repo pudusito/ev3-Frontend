@@ -170,101 +170,106 @@ function PokemonList() {
 
             {/* Formulario para agregar Pokémon */}     
             <section className="section-pokedex">
-                <div className='div-formulario'>
-                    <h2>POKE &nbsp; &nbsp; DEX EV3</h2> {/*&nbsp; = espacio no separable (non-breaking space). */}
+                <div className="div-pokedex">
+                    <div className='div-formulario'>
+                        <h2>POKE&nbsp;DEX</h2> {/*&nbsp; = espacio no separable (non-breaking space). */}
 
-                    <div className="inputs">
-                        <label className="form-label">Nombre del Pokemon:</label>
-                        <input 
-                            ref={nameRef} 
-                            className="form-control" 
-                            type="text" 
-                            placeholder="Agrega un nombre" 
-                            value={nameInput}
-                            onChange={(e) => setNameInput(e.target.value)} />
-                        <PokemonSuggestions inputValue={nameInput} 
-                            onSelect={(pokemonName) => {
-                            setNameInput(pokemonName);nameRef.current.value = pokemonName;
-                            }}/>
+                        <div className="inputs">
+                            <label className="form-label">Nombre del Pokemon:</label>
+                            <input 
+                                ref={nameRef} 
+                                className="form-control" 
+                                type="text" 
+                                placeholder="Agrega un nombre" 
+                                value={nameInput}
+                                onChange={(e) => setNameInput(e.target.value)} />
+                            <PokemonSuggestions inputValue={nameInput} 
+                                onSelect={(pokemonName) => {
+                                setNameInput(pokemonName);nameRef.current.value = pokemonName;
+                                }}/>
 
-                        <label className="form-label">Elemento del Pokemon:</label>
-                        <input ref={typeRef} className="form-control" type="text" placeholder="Agrega el tipo" />
-                        
-                        <label className="form-label">Nivel de Pokemon:</label>
-                        <input ref={levelRef} className="form-control" type="number" min="1" max="100" placeholder="Agrega un Nivel" />
+                            <label className="form-label">Elemento del Pokemon:</label>
+                            <input ref={typeRef} className="form-control" type="text" placeholder="Agrega el tipo" />
+                            
+                            <label className="form-label">Nivel de Pokemon:</label>
+                            <input ref={levelRef} className="form-control" type="number" min="1" max="100" placeholder="Agrega un Nivel" />
 
-                        <label className="form-label">Región de origen:</label>
-                        <input ref={regionRef} className="form-control" type="text" placeholder="Agregar Región" />
-                    </div>
+                            <label className="form-label">Región de origen:</label>
+                            <input ref={regionRef} className="form-control" type="text" placeholder="Agregar Región" />
 
-
-
-                </div>
-                {/* Botones de ingreso */}            
-                <div className="botones">
-                    <button 
-                        type="button" 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            agregarPokemon();
-                        }} 
-                        className="btn btn-success ms-2">
-                        <i className="bi bi-plus-circle-fill me-2"></i>Agregar Pokémon
-                    </button>
-                    <button 
-                        type="button" 
-                        onClick={(e) => {
-                            e.preventDefault();
-                            eliminarFavoritos();
-                        }} 
-                        className="btn btn-danger">
-                        <i className="bi bi-trash me-2"></i>Eliminar Favoritos
-                    </button>
-                </div>
-                                    
-                {/* Tabla de Pokémon */}
-                <div className="output">
-                    <h2>Lista de pokemones</h2>
-
-                    <div className="div-listado">
-                        {pokemons.length > 0 ? (
-                            <div className="scroll-table">
-                                <table className="table table-striped table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Favorito</th>
-                                            <th>Nombre</th>
-                                            <th>Tipo</th>
-                                            <th>Nivel</th>
-                                            <th>Región</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {pokemons.map((pokemon) => (
-                                            <PokemonItem 
-                                                key={pokemon.id} 
-                                                pokemon={pokemon} 
-                                                cambiarFavorito={cambiarFavorito}
-                                                eliminarPokemon={eliminarPokemon}
-                                                editarPokemon={editarPokemon}
-                                            />
-                                        ))}
-                                    </tbody>
-                                </table>
+                            {/* Botones de ingreso */}            
+                            <div className="botones">
+                                <button 
+                                    type="button" 
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        agregarPokemon();
+                                    }} 
+                                    className="btn btn-success ms-2">
+                                    <i className="bi bi-plus-circle-fill me-2"></i>Agregar Pokémon
+                                </button>
+                                <button 
+                                    type="button" 
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        eliminarFavoritos();
+                                    }} 
+                                    className="btn btn-danger">
+                                    <i className="bi bi-trash me-2"></i>Eliminar Favoritos
+                                </button>
                             </div>
-                        ) : (
-                            <div className="alert alert-warning">
-                                No hay Pokémon registrados. ¡Agrega algunos!
-                            </div>
-                        )}
-                    </div>
+                        </div>
 
-                    {/*Tabla de alerta */}
-                    <div className="div-tarjeta">
-                        <ResumenPokemons />
-                    </div>
 
+
+                    </div>
+                                
+                                
+
+                    {/* Tabla de Pokémon */}
+                    <div className="output">
+                        <h2>Lista de pokemones</h2>
+
+                        <div className="div-listado">
+                            {pokemons.length > 0 ? (
+                                <div className="scroll-table">
+                                    <table className="table table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Favorito</th>
+                                                <th>Nombre</th>
+                                                <th>Tipo</th>
+                                                <th>Nivel</th>
+                                                <th>Región</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {pokemons.map((pokemon) => (
+                                                <PokemonItem 
+                                                    key={pokemon.id} 
+                                                    pokemon={pokemon} 
+                                                    cambiarFavorito={cambiarFavorito}
+                                                    eliminarPokemon={eliminarPokemon}
+                                                    editarPokemon={editarPokemon}
+                                                />
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            ) : (
+                                <div className="alert alert-warning">
+                                    No hay Pokémon registrados. ¡Agrega algunos!
+                                </div>
+                            )}
+                        </div>
+
+                        {/*Tabla de alerta */}
+                        <div className="div-tarjeta">
+                            <ResumenPokemons />
+                        </div>
+
+                    </div>
                 </div>
             </section>
             

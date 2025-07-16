@@ -1,12 +1,24 @@
 /* ESTILOS FORMULARIO */
 .section-pokedex {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  display: flex;
+
   width: fit-content;
-  position: relative;
-  top: 20vh;
-  left: 0vh;
+  height: fit-content;
+
   z-index: 10;
+}
+
+.div-pokedex {
+
+  display: flex; /* o display: grid con columnas */
+  flex-direction: row; /* fila por defecto */
+  position: relative;
+  width: fit-content;
+  height: fit-content;
 
 }
 
@@ -27,14 +39,17 @@
 
 /* Título */
 .div-formulario h2 {
-  font-size: 1.6rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 1000;
+
   color: rgb(0, 255, 64);
+  text-shadow: 4px 4px 4px rgb(1, 66, 6);
+  box-shadow: 0px 0px 0px 3px rgb(0, 0, 0);
   text-align: center;
 
-  position: absolute;         /* Posicionamiento absoluto sobre .div-formulario */
-  top: 7%;                    /* Separación desde el borde superior */
-  left: 58%;                  /* Centrado horizontal */
+  position: absolute;        
+  top: 7%;               
+  left: 55%;            
 
 }
 
@@ -53,9 +68,10 @@
 
   
   display: flex;
-  top: 23%;     /* Ajusta según dónde quieras colocarlo */
-  left: 13%;    /* Ajusta para que quede dentro de la pokédex */
-  width: 74%;   /* Ajusta según el espacio interior */
+  top: 23%;    
+  left: 13%;   
+  width: 74%; 
+  height: fit-content;
   
 }
 
@@ -66,24 +82,42 @@
 
 /* Botones */
 .botones {
-  font-size: 1rem;
-  border: none;
   color: white;
 
-  margin: 0 5px;
-  cursor: pointer;  
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 
-  position: absolute;
-  display: flex;
-  bottom: 7%;   
-  left: 24%;    
-  transform: translate(-50%, -50%);
+  height: fit-content;
+  width: fit-content;
+
+
+  display: flex; 
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+ 
 
 }
 
 /* Íconos de Bootstrap */
-.botones i {
-  font-size: 1rem;
+.btn {
+  border-radius: 10px;
+  border-radius: border-box;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  box-shadow: 0px 0px 0px 1px rgb(0, 0, 0);
+}
+.btn i {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: none;
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
@@ -138,7 +172,7 @@
 
 .alert {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: clamp(1.5rem, 4vw, 1.5em); /* clamp vuelve responsivo un texto(minimo, 4% ancho de ventana ,maximo)*/
+  font-size: clamp(1.5rem, 4vw, 1.5em); 
   text-align: center;
   margin: 0 !important;
 }
@@ -166,7 +200,11 @@
   overflow: scroll;
   height: 100%;
   width: 100%;
+  scrollbar-color: #ffcc00 #1e1e1e;
+  scrollbar-width: thin;  
+  scroll-behavior: smooth;
 }
+
 
 .table {
   width: fit-content;

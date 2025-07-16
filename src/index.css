@@ -1,5 +1,15 @@
 /* El centrado debe hacerse sobre el elemento padre (.div-titulo), que sí es responsable del layout. */
 
+html, body {
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  width: 100%;
+
+  box-sizing: border-box;
+  overflow: auto;
+}
 
 body {
   background-image: url("/fondopokemon.png"); /*ruta de la imagen */
@@ -7,12 +17,6 @@ body {
   background-position: center;        /* Centra la imagen */
   background-repeat: no-repeat;       /* Evita que se repita */      
   background-attachment: fixed;        /*hace que el fondo se quede fijo al hacer scroll*/
-
-  margin: 0;
-  padding: 1em;
-  box-sizing: border-box; /* hace que el tamaño que definimos sea ese sin sumar margin y padding*/
-  position: relative;
-
 }
 
 .header-titulo { 
@@ -64,7 +68,7 @@ body {
 }
 
 .pie {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   text-align: center;
