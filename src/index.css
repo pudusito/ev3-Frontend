@@ -1,4 +1,3 @@
-/* El centrado debe hacerse sobre el elemento padre (.div-titulo), que sí es responsable del layout. */
 
 html, body {
   margin: 0;
@@ -28,10 +27,10 @@ body {
   box-shadow: -1px 0px 1px 2px#000000fb; /* x - y - desenfoque- extension- color */
 
   box-sizing: border-box;
-  padding: 0 ; /*agrega espacio extra a los lados*/
+  padding: 0 ; 
   margin: 0;
   
-  width: fit-content; /* ajusta al tamaño del contenido*/
+  width: fit-content;
   
 
   /* parecido a tkinter FLEX-GRID*/
@@ -55,7 +54,7 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: clamp(1.5rem, 4vw, 3em); /* clamp vuelve responsivo un texto(minimo, 4% ancho de ventana ,maximo)*/
   margin: 0;
-  text-align: center; /*centra el texto */
+  text-align: center;
 
   color: white;
 

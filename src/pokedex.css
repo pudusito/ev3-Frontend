@@ -75,6 +75,11 @@
   
 }
 
+.inputs label {
+  text-align: center;
+  font-weight: 700;
+}
+
 /* Estilos para las sugerencias de Pokémon */
 .z-index-dropdown {
   z-index: 1050;
@@ -212,3 +217,10 @@
 
 }
 
+.form-check-input {
+  border: 2px solid black;
+}
+
+.pokemon-image {
+  scale: 1.8;
+}
