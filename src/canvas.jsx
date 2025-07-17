@@ -77,7 +77,7 @@ function Modelos3D() {
       <primitive object={snorlax.scene} scale={5} position={[54, -0.5, 0, 0]} />
       <primitive object={sudowoodo.scene} scale={1} position={[57, 0, 0, 0]} rotation={[0, Math.PI ,0]} />
       <primitive object={victreebel.scene} scale={0.3} position={[60, -1, 0, 0]} rotation={[0, Math.PI ,0]} />
-      <primitive object={magikarp.scene} scale={10} position={[63, -1, 0, 0]} />
+      <primitive object={magikarp.scene} scale={10} position={[63, -1, 0, 0]} /> {/* super magikarp gigante */}
     </>
   );
 }

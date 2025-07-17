@@ -16,7 +16,9 @@ body {
   background-position: center;        /* Centra la imagen */
   background-repeat: no-repeat;       /* Evita que se repita */      
   background-attachment: fixed;        /*hace que el fondo se quede fijo al hacer scroll*/
+  overflow: auto;
 }
+
 
 .header-titulo { 
   background-color: rgba(177, 165, 165, 0); /* Opcional, para que el canvas resalte */
