@@ -275,7 +275,7 @@ function PokemonList() {
             
             <footer className="pie ">
                 <h4>Nombres:</h4>
-                <p> - Benjamin Maldonado <br/> - Victor Riquelme </p>
+                <p> - Benjamin Maldonado&nbsp; <br/> - Victor Riquelme </p>
             </footer>   
         </>
     );
