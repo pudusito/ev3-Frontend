@@ -4,10 +4,8 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 3rem;
   display:flex;
-  justify-content: center;
-  
+  justify-content: center;  
 
   width: 100vh;
   height: fit-content;
@@ -30,6 +28,8 @@
   width: fit-content;
   height: fit-content;
 
+  margin-top: 15rem;
+  
 }
 
 @media (max-width: 800px){

@@ -57,8 +57,8 @@ export default function Pokeball3D() {
         }}>
         <Canvas style={{
             backgroundColor:' rgba(0, 0, 0, 0)',
-            width: '100%',
-            height: '100%',
+            width: '70%',
+            height: '70%',
   
           }}
         
