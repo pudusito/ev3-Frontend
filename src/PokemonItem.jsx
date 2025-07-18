@@ -182,7 +182,7 @@ function PokemonItem({ pokemon, cambiarFavorito, eliminarPokemon, editarPokemon 
                                     alt="Poké Ball" 
                                     width="30" 
                                     height="30" 
-                                    className="me-2 pokemon-image" 
+                                    className="me-2 pokemon-image imagen-poke" 
                                 />
                             ) : (
                                 <img 
@@ -190,7 +190,7 @@ function PokemonItem({ pokemon, cambiarFavorito, eliminarPokemon, editarPokemon 
                                     alt={name} 
                                     width="40" 
                                     height="40" 
-                                    className="me-2 pokemon-image" 
+                                    className="me-2 pokemon-image imagen-poke" 
                                 />
                             )}
                             {name}

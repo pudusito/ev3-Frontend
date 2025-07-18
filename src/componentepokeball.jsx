@@ -59,6 +59,7 @@ export default function Pokeball3D() {
             backgroundColor:' rgba(0, 0, 0, 0)',
             width: '100%',
             height: '100%',
+  
           }}
         
         

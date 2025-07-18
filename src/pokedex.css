@@ -4,23 +4,43 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-top: 3rem;
+  display:flex;
+  justify-content: center;
+  
 
-
-  width: fit-content;
+  width: 100vh;
   height: fit-content;
 
   z-index: 10;
 }
 
+@media (max-width: 800px){
+  .section-pokedex{
+    margin-top: 20rem;
+    width: 20rem;
+  }
+}
 
 .div-pokedex {
 
-  display: flex; /* o display: grid con columnas */
-  flex-direction: row; /* fila por defecto */
+  display: flex;
+  flex-direction: row;
   position: relative;
   width: fit-content;
   height: fit-content;
 
+}
+
+@media (max-width: 800px){
+  .div-pokedex {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .div-formulario{
+    width: 100%;
+  }
 }
 
 /* Contenedor principal fijo Input*/
@@ -227,4 +247,17 @@
 
 .pokemon-image {
   scale: 1.8;
+}
+
+.imagen-poke {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+
+}
+
+.imagen-poke:hover {
+  transform: translateY(-5px) scale(1.2);
 }
